@@ -8,55 +8,50 @@
     tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/bmicalculator"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="BMi Calculator"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:text="Enter weight in kilograms"
-        android:layout_marginLeft="16dp"
+        android:text="BMI Calculator"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/weightlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter weight in kilograms"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/bmicalculator"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/bmicalculator"/>
 
     <EditText
         android:id="@+id/weight"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="16dp"
-        android:layout_marginTop="1dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/weightlabel"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/bmicalculator" />
 
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/heightlabel"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:text="Enter height in meter"
-        tools:layout_editor_absoluteX="16dp"
-        android:layout_marginTop="7dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/weight"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintLeft_toLeftOf="@+id/bmicalculator"/>
+
 
     <EditText
         android:id="@+id/height"
@@ -65,23 +60,21 @@
         android:ems="10"
         android:inputType="numberDecimal"
         tools:layout_editor_absoluteX="16dp"
-        android:layout_marginTop="-4dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/heightlabel"
+        app:layout_constraintLeft_toLeftOf="@+id/bmicalculator"/>
 
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
+
+    <TextView
+        android:id="@+id/BMI"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
         android:text="Your BMI is"
-        tools:layout_editor_absoluteX="16dp"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toBottomOf="@+id/height"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:layout_editor_absoluteY="289dp"
+        tools:layout_editor_absoluteX="27dp"
+        app:layout_constraintLeft_toLeftOf="@+id/bmicalculator"
+        app:layout_constraintTop_toBottomOf="@+id/height"/>
 
     <EditText
         android:id="@+id/bmi"
@@ -89,31 +82,31 @@
         android:layout_height="49dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        tools:layout_editor_absoluteX="16dp"
-        android:layout_marginTop="1dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText6"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        tools:layout_editor_absoluteY="322dp"
+        tools:layout_editor_absoluteX="27dp"
+        app:layout_constraintLeft_toLeftOf="@+id/bmicalculator"
+        app:layout_constraintTop_toBottomOf="@+id/BMI"/>
+
 
     <Button
-        android:id="@+id/clear"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Clear"
-        app:layout_constraintLeft_toRightOf="@+id/calculate"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/bmi" />
-
-    <Button
-        android:id="@+id/calculate"
+        android:id="@+id/calculatelabel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:onClick="calculateOnClick"
         android:text="Calculate"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="16dp"
+        tools:layout_editor_absoluteX="49dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/bmi" />
+        app:layout_constraintTop_toBottomOf="@+id/bmi"
+        app:layout_constraintLeft_toLeftOf="@+id/bmicalculator"/>
+
+    <Button
+        android:id="@+id/clearlabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        app:layout_constraintLeft_toRightOf="@+id/calculatelabel"
+        android:layout_marginLeft="-9dp"
+        app:layout_constraintTop_toTopOf="@+id/calculatelabel"
+        android:layout_marginTop="-8dp"/>
 
 </android.support.constraint.ConstraintLayout>
